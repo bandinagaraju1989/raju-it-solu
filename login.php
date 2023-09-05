@@ -54,7 +54,7 @@ class User
         $result = $statement->execute([':username' => $username]);
 
         if (false === $result) {
-            throw new Exception(implode(' ', $statement->errorInfo()));
+            throw new Exception(imploding(' ', $statement->errorInfo()));
         }
 
         $row = $statement->fetch(PDO::FETCH_ASSOC);
